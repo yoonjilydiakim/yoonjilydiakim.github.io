@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog and writing.">
+  <title>Blog | My Personal Site</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/about.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">My Site</a>
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="Main navigation">
+    <ul class="nav-list">
+      <li><a href="index.html" class="nav-link">home</a></li>
+      <li><a href="resume.html" class="nav-link">resume</a></li>
+      <li><a href="builds.html" class="nav-link">builds &amp; works</a></li>
+      <li><a href="gallery.html" class="nav-link">gallery</a></li>
+      <li><a href="blog.html" class="nav-link">blog</a></li>
+      <li><a href="about.html" class="nav-link">about</a></li>
+      <li><a href="contact.html" class="nav-link">contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <h1>Blog</h1>
+    <p>Your blog posts go here.</p>
+  </main>
+
+  <footer class="page-footer">
+    <p>&copy; <span id="year"></span> My Personal Site. All rights reserved.</p>
+  </footer>
+
+  <div class="music-player-container" id="music-player-container" aria-label="Background music player">
+    <audio id="bg-audio" preload="metadata"></audio>
+    <div class="music-player-controls">
+      <button type="button" id="music-play-pause" class="btn-music" aria-label="Play background music">Play</button>
+      <label for="music-volume" class="visually-hidden">Volume</label>
+      <input type="range" id="music-volume" min="0" max="1" step="0.1" value="0.5" aria-label="Volume">
+    </div>
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/music-player.js"></script>
+  <script src="js/drag-drop.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

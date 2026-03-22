@@ -1,0 +1,266 @@
+/* === About page: same background as home, logo in corner, image left / text right === */
+
+/* Same full-page background as home */
+.about-page {
+  min-height: 100vh;
+  background: url('../../assets/background.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.about-page .page-footer {
+  display: none;
+}
+
+/* Typography: Helvetica Neue Bold, -3% letter-spacing (same as home subtext) */
+.about-page .about-headline,
+.about-page .about-body,
+.about-page .about-connect {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* === Header: logo only (50% smaller than home logo) === */
+.about-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: calc(3rem + 15px) 0 0 calc(3rem + 15px);
+}
+
+.about-logo-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.about-logo {
+  display: block;
+}
+
+.about-logo img {
+  display: block;
+  width: 105px;
+  height: auto;
+  max-width: 105px;
+}
+
+/* Dropdown nav: same format as home (vertical, pink links); shown on hover */
+.about-nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0;
+  padding: 0.4rem 0.6rem 0.5rem;
+  min-width: 10rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.about-logo-dropdown:hover .about-nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.about-nav-dropdown .nav-list {
+  flex-direction: column;
+  gap: 0.05rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.about-nav-dropdown .nav-link {
+  display: block;
+  padding: 0.12rem 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-size: 1rem;
+  color: var(--color-accent, #FF3BCB);
+  text-decoration: none;
+  text-transform: lowercase;
+  background: transparent;
+  transition: color 0.2s ease;
+}
+
+.about-nav-dropdown .nav-link:hover {
+  color: var(--color-accent-hover, #e02ab3);
+  text-decoration: underline;
+}
+
+.about-nav-dropdown .nav-link.active {
+  color: var(--color-accent, #FF3BCB);
+  text-decoration: underline;
+}
+
+/* Home page hero logo is 210px; 50% = 105px */
+
+/* === Main: two columns === */
+.main-content--about {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem 3rem 3rem;
+  box-sizing: border-box;
+}
+
+/* === Left: image with overlays === */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+}
+
+.about-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid #000;
+  vertical-align: top;
+}
+
+/* Group 13.svg "this is YoonJ!" - top left of image */
+.about-image-overlay--text {
+  position: absolute;
+  top: -8%;
+  left: -5%;
+  width: 45%;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Vector 40.svg on bottom-right of image */
+.about-image-star {
+  position: absolute;
+  bottom: 4%;
+  right: 4%;
+  width: 9rem;
+  height: auto;
+  transform: translate(50px, 15px);
+  z-index: 2;
+}
+
+.about-image-footer {
+  width: 100%;
+  max-width: 380px;
+  background: #000;
+  color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.about-image-footer-icons {
+  opacity: 0.9;
+}
+
+/* === Right: about text === */
+.about-right {
+  padding: 0 1rem;
+  margin-left: -150px;
+  margin-right: 100px;
+}
+
+/* Headline: italic, bold, 25% larger than body */
+.about-headline {
+  font-size: clamp(1.375rem, 2.2vw, 1.705rem);
+  font-style: italic;
+  font-weight: 700;
+  color: #FF3BCB;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.about-body {
+  font-size: clamp(1.045rem, 1.265vw, 1.155rem);
+  line-height: 1.55;
+  color: #FF3BCB;
+  margin: 0 0 1.5rem;
+}
+
+.about-body p {
+  margin: 0 0 0.85rem;
+}
+
+.about-body p:last-child {
+  margin-bottom: 0;
+}
+
+.about-connect {
+  margin: 1.5rem 0 0;
+  font-size: clamp(1.045rem, 1.32vw, 1.155rem);
+  color: #FF3BCB;
+  text-align: right;
+}
+
+.about-connect-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.about-connect-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  .main-content--about {
+    grid-template-columns: 1fr;
+    padding: 5rem 1.5rem 2rem;
+  }
+
+  .about-left {
+    order: 1;
+  }
+
+  .about-right {
+    order: 2;
+    padding: 0;
+  }
+
+  .about-image-wrap {
+    max-width: 280px;
+  }
+
+  .about-image-footer {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-header {
+    padding: 1rem 0 0 1rem;
+  }
+
+  .about-logo img {
+    width: 80px;
+    max-width: 80px;
+  }
+}

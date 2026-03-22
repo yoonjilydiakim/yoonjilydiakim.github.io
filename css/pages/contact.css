@@ -1,0 +1,4 @@
+/* === Contact page specific styles === */
+.main-content h1 {
+  margin-bottom: var(--spacing-md);
+}

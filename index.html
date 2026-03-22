@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Builder, creator, entrepreneur, model. Just a small girl with big dreams.">
+  <title>Home | My Personal Site</title>
+  <link rel="icon" href="assets/Frame 24.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body class="home-page">
+  <nav class="main-nav main-nav--vertical" aria-label="Main navigation">
+    <ul class="nav-list nav-list--vertical">
+      <li><a href="index.html" class="nav-link">home</a></li>
+      <li><a href="resume.html" class="nav-link">resume</a></li>
+      <li><a href="builds.html" class="nav-link">builds &amp; works</a></li>
+      <li><a href="gallery.html" class="nav-link">gallery</a></li>
+      <li><a href="blog.html" class="nav-link">blog</a></li>
+      <li><a href="about.html" class="nav-link">about</a></li>
+      <li><a href="#" class="nav-link nav-link--contact" id="contact-nav-link" aria-haspopup="dialog" aria-expanded="false">contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content main-content--home">
+    <section class="hero hero--center">
+      <img src="assets/Frame 24.svg" alt="" class="hero-logo" width="280" height="280">
+      <p class="hero-tagline hero-tagline--main">
+        <img src="assets/desktop icons/Group 11.svg" alt="" class="hero-tagline-icon hero-tagline-icon--before">
+        builder, creator, entrepreneur, model,
+        <span class="hero-tagline-underline-wrap">
+          <span class="hero-tagline-underline-text">wanna do it all-er</span>
+          <img src="assets/desktop icons/Vector 16.svg" alt="" class="hero-tagline-underline-img">
+        </span>
+        <img src="assets/desktop icons/Group 12.svg" alt="" class="hero-tagline-icon hero-tagline-icon--after">
+      </p>
+      <p class="hero-tagline hero-tagline--sub">
+        just a small girl with big dreams
+        <img src="assets/desktop icons/Vector 22.svg" alt="" class="hero-tagline-icon hero-tagline-icon--dreams">
+      </p>
+    </section>
+
+    <!-- Desktop icons: draggable anywhere on the page (positions from screenshot: work, blog, modeling, resume, yoonji, ugc, 35mm, contact) -->
+    <div class="desktop-drop-zone drop-zone drop-zone--anywhere" id="desktop-drop-zone" aria-label="Desktop icons">
+      <a href="#" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="33%" data-initial-top="26%"><img src="assets/desktop icons/Frame 68.svg" alt="" width="65" height="65"></a>
+      <a href="https://yoonjikimugc.my.canva.site/" target="_blank" rel="noopener noreferrer" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="50%" data-initial-top="21%"><img src="assets/desktop icons/Frame 69.svg" alt="" width="65" height="65"></a>
+      <a href="about.html" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="68%" data-initial-top="26%"><img src="assets/desktop icons/Frame 70.svg" alt="" width="65" height="65"></a>
+      <a href="resume.html" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="78%" data-initial-top="50%"><img src="assets/desktop icons/Frame 71.svg" alt="" width="65" height="65"></a>
+      <a href="gallery-modeling.html" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="68%" data-initial-top="74%"><img src="assets/desktop icons/Frame 72.svg" alt="" width="65" height="65"></a>
+      <a href="#" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="50%" data-initial-top="79%"><img src="assets/desktop icons/Frame 73.svg" alt="" width="65" height="65"></a>
+      <a href="#" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="33%" data-initial-top="74%"><img src="assets/desktop icons/Frame 74.svg" alt="" width="65" height="65"></a>
+      <a href="#" class="desktop-icon desktop-icon--scatter draggable contact-modal-trigger" draggable="true" data-initial-left="22%" data-initial-top="50%"><img src="assets/desktop icons/Frame 75.svg" alt="" width="65" height="65"></a>
+    </div>
+
+    <!-- Cassette: click to play "Kiss of Life" by Sade (right edge, only left quarter visible) -->
+    <div class="cassette-wrap">
+      <button type="button" class="cassette-trigger" id="cassette-trigger" aria-label="Click to play or pause music – Kiss of Life by Sade">
+        <img src="assets/cassette.png" alt="" class="cassette-img">
+      </button>
+    </div>
+  </main>
+
+  <!-- Contact modal: overlay + contact card -->
+  <div class="contact-modal-overlay" id="contact-modal-overlay" aria-hidden="true">
+    <div class="contact-modal" id="contact-modal" role="dialog" aria-modal="true" aria-label="Contact">
+      <img src="assets/contact card.svg" alt="Contact" class="contact-modal-img" id="contact-modal-img">
+      <div class="contact-modal-info">
+        <a href="mailto:kimyoonji2002@gmail.com" class="contact-modal-email">kimyoonji2002@gmail.com</a>
+        <a href="https://www.instagram.com/yoonjiikim/" target="_blank" rel="noopener noreferrer" class="contact-modal-ig">@yoonjiikim</a>
+        <a href="https://www.tiktok.com/@yoonjamin" target="_blank" rel="noopener noreferrer" class="contact-modal-tt">@yoonjamin</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Music player (cassette triggers play/pause) -->
+  <div class="music-player-container music-player-container--minimal" id="music-player-container" aria-label="Background music player">
+    <audio id="bg-audio" preload="metadata">
+      <source src="assets/Kiss of Life.mp3" type="audio/mpeg">
+    </audio>
+    <div class="music-player-controls">
+      <button type="button" id="music-play-pause" class="btn-music" aria-label="Play background music">Play</button>
+      <label for="music-volume" class="visually-hidden">Volume</label>
+      <input type="range" id="music-volume" min="0" max="1" step="0.1" value="0.5" aria-label="Volume">
+    </div>
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/music-player.js"></script>
+  <script src="js/drag-drop.js"></script>
+  <script src="js/cassette.js"></script>
+  <script src="js/contact-modal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

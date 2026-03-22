@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hi, I'm Yoonji! Product manager, creator, and builder based in NYC.">
+  <title>About | My Personal Site</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/about.css">
+</head>
+<body class="about-page">
+  <header class="about-header">
+    <div class="about-logo-dropdown">
+      <a href="index.html" class="about-logo">
+        <img src="assets/Frame 24.svg" alt="Home" width="105" height="105">
+      </a>
+      <nav class="about-nav-dropdown" aria-label="Main navigation">
+        <ul class="nav-list nav-list--vertical">
+          <li><a href="index.html" class="nav-link">home</a></li>
+          <li><a href="resume.html" class="nav-link">resume</a></li>
+          <li><a href="builds.html" class="nav-link">builds &amp; works</a></li>
+          <li><a href="gallery.html" class="nav-link">gallery</a></li>
+          <li><a href="blog.html" class="nav-link">blog</a></li>
+          <li><a href="about.html" class="nav-link active">about</a></li>
+          <li><a href="#" class="nav-link contact-modal-trigger">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content main-content--about">
+    <section class="about-left">
+      <div class="about-image-wrap">
+        <img src="assets/IMG_5445 copy.PNG" alt="Yoonji" class="about-image">
+        <img src="assets/Group 13.svg" alt="" class="about-image-overlay about-image-overlay--text" aria-hidden="true">
+        <img src="assets/Vector 40.svg" alt="" class="about-image-star" aria-hidden="true">
+      </div>
+      <div class="about-image-footer">
+        <span>f/9</span>
+        <span>Yoonji_001_0030.AR</span>
+        <span class="about-image-footer-icons">▢ ⋮</span>
+      </div>
+    </section>
+
+    <section class="about-right">
+      <h1 class="about-headline">hi, i'm yoonji!</h1>
+      <div class="about-body">
+        <p>i am currently a product manager based in New York City.<br>i graduated from UCLA and grew up in the east bay area.</p>
+        <p>i am passionate about entrepreneurship and expressing my identity and creativity through building - everything from consumer apps, clothing brands, to photography.</p>
+        <p>i love psychology and studying human behavior - i want to be able to connect people and make the world feel smaller through my projects.</p>
+        <p>i love expressing creativity through art and my everyday life. i am known to be that girl who could be fashionable or just a little weird, and always has a camera on deck to make everyday life into art.</p>
+        <p>i want to do everything and be able to do anything. from working at startups and big corporations, to taking photos and modeling in front of a camera, and vibe coding apps to creating designs on figma - i want to do it all.</p>
+        <p>and this is the hub for it all - welcome to my creative space.</p>
+      </div>
+      <p class="about-connect">
+        <a href="#" id="contact-nav-link" class="about-connect-link">let's connect &lt;3</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Contact modal (same as home) -->
+  <div class="contact-modal-overlay" id="contact-modal-overlay" aria-hidden="true">
+    <div class="contact-modal" id="contact-modal" role="dialog" aria-modal="true" aria-label="Contact">
+      <img src="assets/contact card.svg" alt="Contact" class="contact-modal-img" id="contact-modal-img">
+      <div class="contact-modal-info">
+        <a href="mailto:kimyoonji2002@gmail.com" class="contact-modal-email">kimyoonji2002@gmail.com</a>
+        <a href="https://www.instagram.com/yoonjiikim/" target="_blank" rel="noopener noreferrer" class="contact-modal-ig">@yoonjiikim</a>
+        <a href="https://www.tiktok.com/@yoonjamin" target="_blank" rel="noopener noreferrer" class="contact-modal-tt">@yoonjamin</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="music-player-container" id="music-player-container" aria-label="Background music player">
+    <audio id="bg-audio" preload="metadata"></audio>
+    <div class="music-player-controls">
+      <button type="button" id="music-play-pause" class="btn-music" aria-label="Play background music">Play</button>
+      <label for="music-volume" class="visually-hidden">Volume</label>
+      <input type="range" id="music-volume" min="0" max="1" step="0.1" value="0.5" aria-label="Volume">
+    </div>
+  </div>
+
+  <script src="js/navigation.js"></script>
+  <script src="js/music-player.js"></script>
+  <script src="js/drag-drop.js"></script>
+  <script src="js/contact-modal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

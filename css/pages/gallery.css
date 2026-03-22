@@ -1,0 +1,454 @@
+/* === Gallery page: two-option landing (modeling / film work) === */
+
+.gallery-page {
+  min-height: 100vh;
+  background: url('../../assets/background.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+/* Modeling subpage: custom background */
+.gallery-page--modeling {
+  background: url('../../assets/modeling_background.png') repeat-y center top;
+  background-size: auto 100%;
+}
+
+.gallery-page .page-footer {
+  display: none;
+}
+
+/* Typography: Helvetica Neue Bold, -3% letter-spacing (same as about/resume) */
+.gallery-page .main-content--gallery,
+.gallery-page .gallery-option,
+.gallery-page .gallery-title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #FF3BCB;
+}
+
+/* Header: logo with hover dropdown nav (same pattern as about/resume) */
+.gallery-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: calc(3rem + 15px) 0 0 calc(3rem + 15px);
+}
+
+.gallery-logo-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.gallery-logo {
+  display: block;
+}
+
+.gallery-logo img {
+  display: block;
+  width: 105px;
+  height: auto;
+  max-width: 105px;
+}
+
+.gallery-nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0;
+  padding: 0.4rem 0.6rem 0.5rem;
+  min-width: 10rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.gallery-logo-dropdown:hover .gallery-nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.gallery-nav-dropdown .nav-list {
+  flex-direction: column;
+  gap: 0.05rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.gallery-nav-dropdown .nav-link {
+  display: block;
+  padding: 0.12rem 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-size: 1rem;
+  color: var(--color-accent, #FF3BCB);
+  text-decoration: none;
+  text-transform: lowercase;
+  background: transparent;
+  transition: color 0.2s ease;
+}
+
+.gallery-nav-dropdown .nav-link:hover {
+  color: var(--color-accent-hover, #e02ab3);
+  text-decoration: underline;
+}
+
+.gallery-nav-dropdown .nav-link.active {
+  color: var(--color-accent, #FF3BCB);
+  text-decoration: underline;
+}
+
+/* Main: base layout */
+.main-content--gallery {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 4rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Landing page: center options vertically & horizontally */
+.gallery-page:not(.gallery-page--sub) .main-content--gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Landing: center two large options horizontally */
+.gallery-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rem;
+}
+
+.gallery-option {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FF3BCB;
+}
+
+.gallery-option:hover {
+  color: var(--color-accent-hover, #e02ab3);
+  text-decoration: underline;
+}
+
+.gallery-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.gallery-subcopy {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #FF3BCB;
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+}
+
+/* === Modeling page layout === */
+.gallery-page--modeling .main-content--gallery.modeling-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.modeling-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.modeling-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modeling-hero-text {
+  color: #FF3BCB;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-left: 20%;
+}
+
+.modeling-name {
+  margin: 0 0 1rem;
+  font-size: clamp(1.56rem, 2.9vw, 2.19rem);
+}
+
+.modeling-meta {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.modeling-meta-col p {
+  margin: 0 0 0.15rem;
+}
+
+.modeling-contact,
+.modeling-social {
+  margin: 0 0 0.25rem;
+  font-size: 1.2rem;
+}
+
+.modeling-contact a,
+.modeling-social a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.modeling-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.25rem;
+  row-gap: 3rem;
+}
+
+.modeling-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modeling-item--wide {
+  grid-column: span 2;
+}
+
+.modeling-item--tall {
+  grid-row: span 2;
+}
+
+/* Row with 75% / 25% split, same gap, equal height images */
+.modeling-row--75-25 {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 1.25rem;
+  row-gap: 3rem;
+  min-height: 0;
+}
+
+.modeling-row--75-25 .modeling-item {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.modeling-row--75-25 .modeling-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Row with 3 equal columns, same gap, equal height images */
+.modeling-row--three {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.25rem;
+  row-gap: 3rem;
+  min-height: 0;
+}
+
+.modeling-row--three .modeling-item {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.modeling-row--three .modeling-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Row with portrait on left, two stacked landscape images on right */
+.modeling-row--portrait-stack {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  column-gap: 1.25rem;
+  row-gap: 3rem;
+  min-height: 0;
+  align-items: stretch;
+}
+
+.modeling-row--portrait-stack .modeling-item--portrait {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.modeling-row--portrait-stack .modeling-item--portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modeling-row--stacked {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 1.25rem;
+  min-height: 0;
+}
+
+.modeling-row--stacked .modeling-item {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.modeling-row--stacked .modeling-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Row with portrait on left, two staggered portraits on right */
+.modeling-row--portrait-stagger {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  column-gap: 1.25rem;
+  row-gap: 3rem;
+  align-items: stretch;
+}
+
+.modeling-row--portrait-stagger .modeling-item--portrait-main {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.modeling-row--portrait-stagger .modeling-item--portrait-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modeling-stagger {
+  position: relative;
+  min-height: clamp(14rem, 26vw, 20rem);
+}
+
+.modeling-stagger-item {
+  position: absolute;
+  width: 87.5%;
+  max-width: 260px;
+  overflow: hidden;
+}
+
+.modeling-stagger-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.modeling-stagger-item--top {
+  top: 5%;
+  left: 0;
+  z-index: 2;
+}
+
+.modeling-stagger-item--bottom {
+  bottom: 5%;
+  right: 0;
+}
+
+/* Row with 3 stacked landscapes on left and portrait on right */
+.modeling-row--stack3-left {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  column-gap: 1.25rem;
+  row-gap: 3rem;
+  align-items: stretch;
+}
+
+.modeling-stack3 {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 1.25rem;
+  height: 100%;
+}
+
+.modeling-stack3-item {
+  overflow: hidden;
+}
+
+.modeling-stack3-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Keep right portrait in stack3 row at natural aspect ratio */
+.modeling-row--stack3-left .modeling-item--portrait-main img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .modeling-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .modeling-meta {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .modeling-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content--gallery {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .gallery-options {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .modeling-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-header {
+    padding: 1rem 0 0 1rem;
+  }
+
+  .gallery-logo img {
+    width: 80px;
+    max-width: 80px;
+  }
+
+  .gallery-options {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
