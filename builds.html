@@ -3,53 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Builds and works.">
-  <title>Builds & Works | My Personal Site</title>
+  <title>builds &amp; works — yoonji kim</title>
+  <meta name="description" content="Builds and works by Yoonji Kim.">
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="assets/star.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages/about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="page-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">My Site</a>
-    </div>
-  </header>
 
-  <nav class="main-nav" aria-label="Main navigation">
-    <ul class="nav-list">
-      <li><a href="index.html" class="nav-link">home</a></li>
-      <li><a href="resume.html" class="nav-link">resume</a></li>
-      <li><a href="builds.html" class="nav-link">builds &amp; works</a></li>
-      <li><a href="gallery.html" class="nav-link">gallery</a></li>
-      <li><a href="blog.html" class="nav-link">blog</a></li>
-      <li><a href="about.html" class="nav-link">about</a></li>
-      <li><a href="contact.html" class="nav-link">contact</a></li>
+  <nav class="nav" aria-label="Main">
+    <a class="nav-brand" href="index.html" aria-label="yoonji kim — home">
+      <img class="nav-logo" src="assets/Frame 24.svg" alt="" width="151" height="60">
+      <span class="nav-clock" data-clock>nyc</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="builds.html" aria-current="page">work</a></li>
+      <li><a href="gallery.html">gallery</a></li>
+      <li><a href="resume.html">resume</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="blog.html">blog</a></li>
+      <li><a href="contact.html">contact</a></li>
     </ul>
+    <button class="nav-toggle" type="button" aria-controls="menu" aria-expanded="false">menu</button>
   </nav>
-
-  <main class="main-content">
-    <h1>Builds &amp; Works</h1>
-    <p>Your projects and builds go here.</p>
-  </main>
-
-  <footer class="page-footer">
-    <p>&copy; <span id="year"></span> My Personal Site. All rights reserved.</p>
-  </footer>
-
-  <div class="music-player-container" id="music-player-container" aria-label="Background music player">
-    <audio id="bg-audio" preload="metadata"></audio>
-    <div class="music-player-controls">
-      <button type="button" id="music-play-pause" class="btn-music" aria-label="Play background music">Play</button>
-      <label for="music-volume" class="visually-hidden">Volume</label>
-      <input type="range" id="music-volume" min="0" max="1" step="0.1" value="0.5" aria-label="Volume">
-    </div>
+  <div class="menu" id="menu">
+    <button class="menu-close" type="button">close</button>
+    <a href="builds.html">work</a>
+    <a href="gallery.html">gallery</a>
+    <a href="resume.html">resume</a>
+    <a href="about.html">about</a>
+    <a href="blog.html">blog</a>
+    <a href="contact.html">contact</a>
+    <a href="index.html">home</a>
   </div>
 
-  <script src="js/navigation.js"></script>
-  <script src="js/music-player.js"></script>
-  <script src="js/drag-drop.js"></script>
-  <script src="js/main.js"></script>
+  <main>
+    <section class="soon" style="--accent:var(--orange)">
+      <svg class="burst spin" viewBox="0 0 200 200" aria-hidden="true"><polygon fill="currentColor" points="100.0,8.1 109.3,47.0 132.8,10.0 126.4,54.2 160.7,27.7 143.2,63.8 176.8,55.7 154.6,80.1 187.1,84.6 157.2,100.0 187.5,115.4 149.9,118.2 180.6,146.5 147.4,139.8 157.5,168.5 127.3,147.4 132.7,189.8 111.0,162.4 100.0,194.9 90.1,155.9 65.9,193.7 73.7,145.5 36.8,175.3 57.5,135.7 22.3,144.9 49.8,118.3 9.7,115.9 38.2,100.0 11.2,84.3 44.6,79.8 17.1,52.2 56.7,63.7 39.2,27.6 73.6,54.3 69.7,16.6 90.5,46.4"/></svg>
+      <div class="soon-inner">
+        <h1 class="mega"><span class="reveal-line"><span>builds &amp; works</span></span></h1>
+        <span class="hand reveal" style="color:var(--orange)">currently cooking… check back soon ♥</span>
+        <a class="pill" style="--c:var(--lime)" href="https://yoonjikimugc.my.canva.site/" target="_blank" rel="noopener noreferrer">peek my ugc portfolio ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span data-year>2026</span> yoonji kim — made with &lt;3 in nyc</span>
+    <span class="footer-links"><a href="index.html">home</a><a href="about.html">about</a><a href="resume.html">resume</a><a href="gallery.html">gallery</a><a href="builds.html">builds</a><a href="blog.html">blog</a></span>
+  </footer>
+
+  <button class="tape" type="button" data-src="assets/Kiss of Life.mp3" aria-pressed="false" aria-label="Play or pause Kiss of Life by Sade">
+    <span class="tape-cass"><img src="assets/cassette.png" alt=""></span>
+    <span class="tape-label">kiss of life — sade<span class="tape-state">press play</span></span>
+    <span class="tape-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+  </button>
+
+  <script src="js/site.js"></script>
 </body>
 </html>

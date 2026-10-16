@@ -3,171 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Modeling photos and work by Yoonji Kim.">
-  <title>modeling | yjk</title>
+  <title>modeling — yoonji kim</title>
+  <meta name="description" content="Modeling portfolio and comp card for Yoonji Kim.">
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="assets/star.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages/gallery.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="gallery-page gallery-page--sub gallery-page--modeling">
-  <header class="gallery-header">
-    <div class="gallery-logo-dropdown">
-      <a href="index.html" class="gallery-logo">
-        <img src="assets/Frame 24.svg" alt="Home" width="105" height="105">
-      </a>
-      <nav class="gallery-nav-dropdown" aria-label="Main navigation">
-        <ul class="nav-list nav-list--vertical">
-          <li><a href="index.html" class="nav-link">home</a></li>
-          <li><a href="resume.html" class="nav-link">resume</a></li>
-          <li><a href="builds.html" class="nav-link">builds &amp; works</a></li>
-          <li><a href="gallery.html" class="nav-link active">gallery</a></li>
-          <li><a href="blog.html" class="nav-link">blog</a></li>
-          <li><a href="about.html" class="nav-link">about</a></li>
-          <li><a href="#" class="nav-link contact-modal-trigger">contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<body>
 
-  <main class="main-content main-content--gallery modeling-main">
-    <section class="modeling-hero">
-      <div class="modeling-hero-image">
-        <img src="images/model/IMG_0033.JPG" alt="Portrait of Yoonji Kim" loading="lazy">
-      </div>
-      <div class="modeling-hero-text">
-        <h1 class="modeling-name">YOONJI KIM</h1>
-        <div class="modeling-meta">
-          <div class="modeling-meta-col">
-            <p>HEIGHT 5'1"</p>
-            <p>BUST 31"</p>
-            <p>WAIST 26"</p>
-            <p>HIPS 36"</p>
-          </div>
-          <div class="modeling-meta-col">
-            <p>SHOES 6W US</p>
-            <p>HAIR DARK BROWN</p>
-            <p>EYES BROWN</p>
-          </div>
+  <nav class="nav" aria-label="Main">
+    <a class="nav-brand" href="index.html" aria-label="yoonji kim — home">
+      <img class="nav-logo" src="assets/Frame 24.svg" alt="" width="151" height="60">
+      <span class="nav-clock" data-clock>nyc</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="builds.html">work</a></li>
+      <li><a href="gallery.html" aria-current="page">gallery</a></li>
+      <li><a href="resume.html">resume</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="blog.html">blog</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+    <button class="nav-toggle" type="button" aria-controls="menu" aria-expanded="false">menu</button>
+  </nav>
+  <div class="menu" id="menu">
+    <button class="menu-close" type="button">close</button>
+    <a href="builds.html">work</a>
+    <a href="gallery.html">gallery</a>
+    <a href="resume.html">resume</a>
+    <a href="about.html">about</a>
+    <a href="blog.html">blog</a>
+    <a href="contact.html">contact</a>
+    <a href="index.html">home</a>
+  </div>
+
+  <main>
+    <section class="comp">
+      <span class="shot lift reveal" style="--c:var(--cyan)"><img src="images/web/IMG_0033.jpg" alt="Headshot of Yoonji Kim" width="1066" height="1600"></span>
+      <div>
+        <span class="eyebrow reveal" style="--dot:var(--cyan)">modeling — comp card</span>
+        <h1 class="mega comp-name"><span class="reveal-line"><span>yoonji</span></span><span class="reveal-line" style="--d:.08s"><span style="color:var(--cyan)">kim</span></span></h1>
+        <dl class="comp-stats reveal">
+          <div><dt>height</dt><dd>5'1"</dd></div>
+          <div><dt>bust</dt><dd>31"</dd></div>
+          <div><dt>waist</dt><dd>26"</dd></div>
+          <div><dt>hips</dt><dd>36"</dd></div>
+          <div><dt>shoes</dt><dd>6W US</dd></div>
+          <div><dt>hair</dt><dd>dark brown</dd></div>
+          <div><dt>eyes</dt><dd>brown</dd></div>
+        </dl>
+        <div class="comp-contact reveal">
+          <a class="pill" style="--c:var(--cyan)" href="mailto:kimyoonji2002@gmail.com">book me ✉</a>
+          <a class="pill" style="--c:var(--pink)" href="https://www.instagram.com/yoonjiikim/" target="_blank" rel="noopener noreferrer">@yoonjiikim ↗</a>
         </div>
-        <p class="modeling-contact"><a href="mailto:kimyoonji2002@gmail.com">KIMYOONJI2002@GMAIL.COM</a></p>
-        <p class="modeling-social"><a href="https://www.instagram.com/yoonjiikim/" target="_blank" rel="noopener noreferrer">@yoonjiikim</a></p>
       </div>
     </section>
-
-    <section class="modeling-grid">
-      <div class="modeling-item">
-        <img src="images/model/Yoonji_001_0154-2_v1_Original.JPG" alt="Modeling photo Yoonji 0154" loading="lazy">
+    <div class="marquee" style="--bg:var(--cyan);margin-bottom:clamp(30px,5vw,60px)" aria-hidden="true">
+      <div class="marquee-track">
+        <span>editorial</span><span>street</span><span>studio</span><span>flash</span><span>bodega core</span><span>ugc</span>
+        <span>editorial</span><span>street</span><span>studio</span><span>flash</span><span>bodega core</span><span>ugc</span>
       </div>
-      <div class="modeling-item">
-        <img src="images/model/Yoonji_001_0265_v1a_Original.JPG" alt="Modeling photo Yoonji 0265" loading="lazy">
-      </div>
-      <div class="modeling-item">
-        <img src="images/model/Yoonji_001_0331_collage_v1b_Original.JPG" alt="Modeling collage Yoonji 0331" loading="lazy">
-      </div>
-      <div class="modeling-item">
-        <img src="images/model/Yoonji_001_0332_collage_v1b_Original.JPG" alt="Modeling collage Yoonji 0332" loading="lazy">
-      </div>
-      <div class="modeling-item modeling-item--wide">
-        <img src="images/model/Yoonji_001_0303_v1d_Original.JPG" alt="Modeling photo Yoonji 0303" loading="lazy">
-      </div>
-      <div class="modeling-row modeling-row--75-25">
-        <div class="modeling-item">
-          <img src="images/model/Yoonji_001_0200_v1a_Original.JPG" alt="Modeling photo Yoonji 0200" loading="lazy">
-        </div>
-        <div class="modeling-item">
-          <img src="images/model/Yoonji_001_0340_v1a_Original.JPG" alt="Modeling photo Yoonji 0340" loading="lazy">
-        </div>
-      </div>
-      <div class="modeling-row modeling-row--three">
-        <div class="modeling-item">
-          <img src="images/model/IMG_5867.JPG" alt="Studio portrait 5867" loading="lazy">
-        </div>
-        <div class="modeling-item">
-          <img src="images/model/IMG_5862.JPG" alt="Studio portrait 5862" loading="lazy">
-        </div>
-        <div class="modeling-item">
-          <img src="images/model/IMG_5868.JPG" alt="Studio portrait 5868" loading="lazy">
-        </div>
-      </div>
-      <div class="modeling-row modeling-row--portrait-stack">
-        <div class="modeling-item modeling-item--portrait">
-          <img src="images/model/IMG_4475.JPG" alt="Portrait photo 4475" loading="lazy">
-        </div>
-        <div class="modeling-row--stacked">
-          <div class="modeling-item">
-            <img src="images/model/IMG_4441.JPG" alt="Landscape photo 4441" loading="lazy">
-          </div>
-          <div class="modeling-item">
-            <img src="images/model/IMG_4472.JPG" alt="Landscape photo 4472" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="modeling-row modeling-row--three">
-        <div class="modeling-item">
-          <img src="images/model/4W2A2661.jpeg" alt="Modeling photo 4W2A2661" loading="lazy">
-        </div>
-        <div class="modeling-item">
-          <img src="images/model/4W2A2666.jpeg" alt="Modeling photo 4W2A2666" loading="lazy">
-        </div>
-        <div class="modeling-item">
-          <img src="images/model/4W2A2704.jpeg" alt="Modeling photo 4W2A2704" loading="lazy">
-        </div>
-      </div>
-      <div class="modeling-row modeling-row--portrait-stagger">
-        <div class="modeling-item modeling-item--portrait-main">
-          <img src="images/model/IMG_1071.JPG" alt="Portrait photo 1071" loading="lazy">
-        </div>
-        <div class="modeling-stagger">
-          <div class="modeling-stagger-item modeling-stagger-item--top">
-            <img src="images/model/kim_yoonji21.jpeg" alt="Portrait photo kim_yoonji21" loading="lazy">
-          </div>
-          <div class="modeling-stagger-item modeling-stagger-item--bottom">
-            <img src="images/model/IMG_1073.JPG" alt="Portrait photo 1073" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="modeling-row modeling-row--stack3-left">
-        <div class="modeling-stack3">
-          <div class="modeling-stack3-item">
-            <img src="images/model/eightcats_blackcat-26.jpeg" alt="Night modeling photo 26" loading="lazy">
-          </div>
-          <div class="modeling-stack3-item">
-            <img src="images/model/eightcats_blackcat-29.jpeg" alt="Night modeling photo 29" loading="lazy">
-          </div>
-        </div>
-        <div class="modeling-item modeling-item--portrait-main">
-          <img src="images/model/eightcats_blackcat-60.jpeg" alt="Night modeling photo 60" loading="lazy">
-        </div>
-      </div>
+    </div>
+    <section class="masonry" aria-label="Modeling photos">
+      <button class="lift reveal" type="button" data-full="images/web/Yoonji_001_0154-2_v1_Original.jpg"><img src="images/web/Yoonji_001_0154-2_v1_Original.jpg" alt="Studio portrait, chin resting on hands" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2666.jpg"><img src="images/web/4W2A2666.jpg" alt="Faux-fur coat in a bodega aisle" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/Yoonji_001_0265_v1a_Original.jpg"><img src="images/web/Yoonji_001_0265_v1a_Original.jpg" alt="Studio shot with blue glow" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/IMG_5862.jpg"><img src="images/web/IMG_5862.jpg" alt="Under a neon restaurant sign in a green jersey" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/Yoonji_001_0331_collage_v1b_Original.jpg"><img src="images/web/Yoonji_001_0331_collage_v1b_Original.jpg" alt="Mirrored studio collage, mint" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2702.jpg"><img src="images/web/4W2A2702.jpg" alt="Sitting on a red checkered floor" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/Yoonji_001_0340_v1a_Original.jpg"><img src="images/web/Yoonji_001_0340_v1a_Original.jpg" alt="Legs crossed in black heels" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/IMG_4475.jpg"><img src="images/web/IMG_4475.jpg" alt="Night flash portrait in a fur hat" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/Yoonji_001_0303_v1d_Original.jpg"><img src="images/web/Yoonji_001_0303_v1d_Original.jpg" alt="Lying on a studio floor" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2524.jpg"><img src="images/web/4W2A2524.jpg" alt="Crouched by the bodega register" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/IMG_1071.jpg"><img src="images/web/IMG_1071.jpg" alt="Studio portrait in a black top" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/eightcats_blackcat-36.jpg"><img src="images/web/eightcats_blackcat-36.jpg" alt="Sitting on a couch in an oversized coat" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/Yoonji_001_0332_collage_v1b_Original.jpg"><img src="images/web/Yoonji_001_0332_collage_v1b_Original.jpg" alt="Mirrored studio collage, peach" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2560.jpg"><img src="images/web/4W2A2560.jpg" alt="Glancing back between shelves" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/IMG_4441.jpg"><img src="images/web/IMG_4441.jpg" alt="Night flash close-up" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/kim_yoonji21.jpg"><img src="images/web/kim_yoonji21.jpg" alt="Full-length studio portrait" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2585.jpg"><img src="images/web/4W2A2585.jpg" alt="Crouched among snack shelves" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/IMG_5867.jpg"><img src="images/web/IMG_5867.jpg" alt="Sitting at night in a green jersey" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/Yoonji_001_0200_v1a_Original.jpg"><img src="images/web/Yoonji_001_0200_v1a_Original.jpg" alt="Lying down, chin on arms" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2661.jpg"><img src="images/web/4W2A2661.jpg" alt="Standing in a bodega aisle" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/eightcats_blackcat-26.jpg"><img src="images/web/eightcats_blackcat-26.jpg" alt="Lounging on a patterned couch" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/IMG_4465.jpg"><img src="images/web/IMG_4465.jpg" alt="Night flash, fur hat and blue jacket" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2825.jpg"><img src="images/web/4W2A2825.jpg" alt="In front of a fish tank" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/IMG_1073.jpg"><img src="images/web/IMG_1073.jpg" alt="Full-length studio portrait in jeans" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/eightcats_blackcat-60.jpg"><img src="images/web/eightcats_blackcat-60.jpg" alt="On the couch with a friend" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2670.jpg"><img src="images/web/4W2A2670.jpg" alt="Bodega aisle portrait" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/IMG_5868.jpg"><img src="images/web/IMG_5868.jpg" alt="Night portrait, hand on cheek" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2901.jpg"><img src="images/web/4W2A2901.jpg" alt="Leaning on a vintage car" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/IMG_4472.jpg"><img src="images/web/IMG_4472.jpg" alt="Night flash, hands at face" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2405.jpg"><img src="images/web/4W2A2405.jpg" alt="Street portrait in a fur coat" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/eightcats_blackcat-29.jpg"><img src="images/web/eightcats_blackcat-29.jpg" alt="Curled on a couch" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2676.jpg"><img src="images/web/4W2A2676.jpg" alt="Crouched in a bodega aisle" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2704.jpg"><img src="images/web/4W2A2704.jpg" alt="Sitting on a checkered floor among shelves" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/IMG_4539.jpg"><img src="images/web/IMG_4539.jpg" alt="Dark flash portrait" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/eightcats_blackcat-67.jpg"><img src="images/web/eightcats_blackcat-67.jpg" alt="Doing a puzzle with a friend" loading="lazy"></button>
+      <button class="lift reveal" type="button" data-full="images/web/4W2A2562.jpg"><img src="images/web/4W2A2562.jpg" alt="Over-the-shoulder glance in the aisle" loading="lazy"></button>
     </section>
   </main>
 
-  <div class="contact-modal-overlay" id="contact-modal-overlay" aria-hidden="true">
-    <div class="contact-modal" id="contact-modal" role="dialog" aria-modal="true" aria-label="Contact">
-      <img src="assets/contact card.svg" alt="Contact" class="contact-modal-img" id="contact-modal-img">
-      <div class="contact-modal-info">
-        <a href="mailto:kimyoonji2002@gmail.com" class="contact-modal-email">kimyoonji2002@gmail.com</a>
-        <a href="https://www.instagram.com/yoonjiikim/" target="_blank" rel="noopener noreferrer" class="contact-modal-ig">@yoonjiikim</a>
-        <a href="https://www.tiktok.com/@yoonjamin" target="_blank" rel="noopener noreferrer" class="contact-modal-tt">@yoonjamin</a>
-      </div>
-    </div>
+  <footer class="footer">
+    <span>© <span data-year>2026</span> yoonji kim — made with &lt;3 in nyc</span>
+    <span class="footer-links"><a href="index.html">home</a><a href="about.html">about</a><a href="resume.html">resume</a><a href="gallery.html">gallery</a><a href="builds.html">builds</a><a href="blog.html">blog</a></span>
+  </footer>
+
+  <button class="tape" type="button" data-src="assets/Kiss of Life.mp3" aria-pressed="false" aria-label="Play or pause Kiss of Life by Sade">
+    <span class="tape-cass"><img src="assets/cassette.png" alt=""></span>
+    <span class="tape-label">kiss of life — sade<span class="tape-state">press play</span></span>
+    <span class="tape-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+  </button>
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+    <span class="lightbox-count"></span>
+    <button class="lightbox-btn lightbox-close" type="button">close ✕</button>
+    <button class="lightbox-btn lightbox-prev" type="button" aria-label="Previous photo">← prev</button>
+    <img alt="">
+    <button class="lightbox-btn lightbox-next" type="button" aria-label="Next photo">next →</button>
   </div>
 
-  <div class="music-player-container" id="music-player-container" aria-label="Background music player">
-    <audio id="bg-audio" preload="metadata"></audio>
-    <div class="music-player-controls">
-      <button type="button" id="music-play-pause" class="btn-music" aria-label="Play background music">Play</button>
-      <label for="music-volume" class="visually-hidden">Volume</label>
-      <input type="range" id="music-volume" min="0" max="1" step="0.1" value="0.5" aria-label="Volume">
-    </div>
-  </div>
-
-  <script src="js/navigation.js"></script>
-  <script src="js/music-player.js"></script>
-  <script src="js/drag-drop.js"></script>
-  <script src="js/contact-modal.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/site.js"></script>
 </body>
 </html>
-

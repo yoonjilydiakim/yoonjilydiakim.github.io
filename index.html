@@ -3,93 +3,219 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Builder, creator, entrepreneur, model. Just a small girl with big dreams.">
-  <title>YJK</title>
+  <title>yoonji kim</title>
+  <meta name="description" content="Yoonji Kim — builder, creator, entrepreneur, model, wanna-do-it-all-er. Product manager in NYC.">
+  <meta property="og:title" content="yoonji kim">
+  <meta property="og:description" content="builder, creator, entrepreneur, model, wanna-do-it-all-er.">
+  <meta property="og:image" content="https://yoonji.me/images/web/about-portrait.jpg">
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="assets/star.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="home-page">
-  <nav class="main-nav main-nav--vertical" aria-label="Main navigation">
-    <ul class="nav-list nav-list--vertical">
-      <li><a href="index.html" class="nav-link">home</a></li>
-      <li><a href="resume.html" class="nav-link">resume</a></li>
-      <li><a href="builds.html" class="nav-link">builds &amp; works</a></li>
-      <li><a href="gallery.html" class="nav-link">gallery</a></li>
-      <li><a href="blog.html" class="nav-link">blog</a></li>
-      <li><a href="about.html" class="nav-link">about</a></li>
-      <li><a href="#" class="nav-link nav-link--contact" id="contact-nav-link" aria-haspopup="dialog" aria-expanded="false">contact</a></li>
+<body class="home">
+
+  <nav class="nav" aria-label="Main">
+    <a class="nav-brand" href="index.html" aria-label="yoonji kim — home">
+      <img class="nav-logo" src="assets/Frame 24.svg" alt="" width="151" height="60">
+      <span class="nav-clock" data-clock>nyc</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#work">work</a></li>
+      <li><a href="#gallery">gallery</a></li>
+      <li><a href="#resume">resume</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="blog.html">blog</a></li>
+      <li><a href="#contact">contact</a></li>
     </ul>
+    <button class="nav-toggle" type="button" aria-controls="menu" aria-expanded="false">menu</button>
   </nav>
+  <div class="menu" id="menu">
+    <button class="menu-close" type="button">close</button>
+    <a href="#work">work</a>
+    <a href="#gallery">gallery</a>
+    <a href="#resume">resume</a>
+    <a href="#about">about</a>
+    <a href="blog.html">blog</a>
+    <a href="#contact">contact</a>
+    <a href="index.html">home</a>
+  </div>
 
-  <main class="main-content main-content--home">
-    <section class="hero hero--center">
-      <img src="assets/Frame 24.svg" alt="" class="hero-logo" width="280" height="280">
-      <p class="hero-tagline hero-tagline--main">
-        <img src="assets/desktop icons/Group 11.svg" alt="" class="hero-tagline-icon hero-tagline-icon--before">
-        builder, creator, entrepreneur, model,
-        <span class="hero-tagline-underline-wrap">
-          <span class="hero-tagline-underline-text">wanna do it all-er</span>
-          <img src="assets/desktop icons/Vector 16.svg" alt="" class="hero-tagline-underline-img">
-        </span>
-        <img src="assets/desktop icons/Group 12.svg" alt="" class="hero-tagline-icon hero-tagline-icon--after">
-      </p>
-      <p class="hero-tagline hero-tagline--sub">
-        just a small girl with big dreams
-        <img src="assets/desktop icons/Vector 22.svg" alt="" class="hero-tagline-icon hero-tagline-icon--dreams">
-      </p>
-    </section>
+  <main>
+    <!-- ============ HERO ============ -->
+    <header class="hero" id="top">
+      <div class="hero-index">
+        <b>yoonji kim (2026)</b>
+        product manager in new york city. ucla grad, east bay raised. building consumer apps, clothing brands &amp; photos on the side. currently <a href="resume.html">@ mastercard</a>.
+      </div>
+      <div class="hero-scroll">scroll ↓<br>or drag the stars</div>
 
-    <!-- Desktop icons: draggable anywhere on the page (positions from screenshot: work, blog, modeling, resume, yoonji, ugc, 35mm, contact) -->
-    <div class="desktop-drop-zone drop-zone drop-zone--anywhere" id="desktop-drop-zone" aria-label="Desktop icons">
-      <a href="#" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="33%" data-initial-top="26%"><img src="assets/desktop icons/Frame 68.svg" alt="" width="65" height="65"></a>
-      <a href="https://yoonjikimugc.my.canva.site/" target="_blank" rel="noopener noreferrer" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="50%" data-initial-top="21%"><img src="assets/desktop icons/Frame 69.svg" alt="" width="65" height="65"></a>
-      <a href="about.html" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="68%" data-initial-top="26%"><img src="assets/desktop icons/Frame 70.svg" alt="" width="65" height="65"></a>
-      <a href="resume.html" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="78%" data-initial-top="50%"><img src="assets/desktop icons/Frame 71.svg" alt="" width="65" height="65"></a>
-      <a href="gallery-modeling.html" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="68%" data-initial-top="74%"><img src="assets/desktop icons/Frame 72.svg" alt="" width="65" height="65"></a>
-      <a href="#" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="50%" data-initial-top="79%"><img src="assets/desktop icons/Frame 73.svg" alt="" width="65" height="65"></a>
-      <a href="#" class="desktop-icon desktop-icon--scatter draggable" draggable="true" data-initial-left="33%" data-initial-top="74%"><img src="assets/desktop icons/Frame 74.svg" alt="" width="65" height="65"></a>
-      <a href="#" class="desktop-icon desktop-icon--scatter draggable contact-modal-trigger" draggable="true" data-initial-left="22%" data-initial-top="50%"><img src="assets/desktop icons/Frame 75.svg" alt="" width="65" height="65"></a>
-    </div>
+      <p class="hero-hand hero-hand--l">hi! i'm a…</p>
+      <p class="hero-hand hero-hand--r">living &amp; building<br>in nyc ♥</p>
 
-    <!-- Cassette: click to play "Kiss of Life" by Sade (right edge, only left quarter visible) -->
-    <div class="cassette-wrap">
-      <button type="button" class="cassette-trigger" id="cassette-trigger" aria-label="Click to play or pause music – Kiss of Life by Sade">
-        <img src="assets/cassette.png" alt="" class="cassette-img">
-      </button>
-    </div>
-  </main>
+      <div class="hero-stage">
+        <svg class="burst hero-burst spin" viewBox="0 0 200 200" aria-hidden="true"><polygon fill="currentColor" points="100.0,8.1 109.3,47.0 132.8,10.0 126.4,54.2 160.7,27.7 143.2,63.8 176.8,55.7 154.6,80.1 187.1,84.6 157.2,100.0 187.5,115.4 149.9,118.2 180.6,146.5 147.4,139.8 157.5,168.5 127.3,147.4 132.7,189.8 111.0,162.4 100.0,194.9 90.1,155.9 65.9,193.7 73.7,145.5 36.8,175.3 57.5,135.7 22.3,144.9 49.8,118.3 9.7,115.9 38.2,100.0 11.2,84.3 44.6,79.8 17.1,52.2 56.7,63.7 39.2,27.6 73.6,54.3 69.7,16.6 90.5,46.4"/></svg>
+        <img class="hero-portrait" src="images/web/halftone-portrait.png" alt="Halftone portrait of Yoonji" width="1326" height="1800">
 
-  <!-- Contact modal: overlay + contact card -->
-  <div class="contact-modal-overlay" id="contact-modal-overlay" aria-hidden="true">
-    <div class="contact-modal" id="contact-modal" role="dialog" aria-modal="true" aria-label="Contact">
-      <img src="assets/contact card.svg" alt="Contact" class="contact-modal-img" id="contact-modal-img">
-      <div class="contact-modal-info">
-        <a href="mailto:kimyoonji2002@gmail.com" class="contact-modal-email">kimyoonji2002@gmail.com</a>
-        <a href="https://www.instagram.com/yoonjiikim/" target="_blank" rel="noopener noreferrer" class="contact-modal-ig">@yoonjiikim</a>
-        <a href="https://www.tiktok.com/@yoonjamin" target="_blank" rel="noopener noreferrer" class="contact-modal-tt">@yoonjamin</a>
+        <span class="hero-tag" style="--x:-24%;--y:16%;--mx:-2%;--my:4%;--d:.9s;--c:var(--pink)">builder <i>★</i></span>
+        <span class="hero-tag hero-tag--right" style="--x:-22%;--y:28%;--mx:-2%;--my:14%;--d:1.05s;--c:var(--orange)">creator <i>★</i></span>
+        <span class="hero-tag" style="--x:-34%;--y:50%;--mx:-4%;--my:40%;--d:1.2s;--c:var(--cyan)">entrepreneur <i>★</i></span>
+        <span class="hero-tag hero-tag--right" style="--x:-18%;--y:58%;--mx:-4%;--my:50%;--d:1.35s;--c:var(--green)">model <i>★</i></span>
+      </div>
+
+      <h1 class="hero-name" data-split data-fit>yoonji kim</h1>
+
+      <div class="stickers" aria-label="Draggable shortcuts">
+        <a class="sticker" href="#work" style="--x:8%;--y:18%;--mx:4%;--my:28%;--d:1.5s"><span class="sticker-img"><img src="assets/desktop icons/Frame 74.svg" alt=""></span><span class="sticker-label">work.jpg</span></a>
+        <a class="sticker" href="resume.html" style="--x:4%;--y:58%;--mx:28%;--my:34%;--d:1.6s"><span class="sticker-img"><img src="assets/desktop icons/Frame 71.svg" alt=""></span><span class="sticker-label">resume.jpg</span></a>
+        <a class="sticker" href="gallery-modeling.html" style="--x:84%;--y:15%;--mx:54%;--my:28%;--d:1.7s"><span class="sticker-img"><img src="assets/desktop icons/Frame 72.svg" alt=""></span><span class="sticker-label">modeling.zip</span></a>
+        <a class="sticker sticker--desk" href="https://yoonjikimugc.my.canva.site/" target="_blank" rel="noopener noreferrer" style="--x:91%;--y:44%;--d:1.8s"><span class="sticker-img"><img src="assets/desktop icons/Frame 69.svg" alt=""></span><span class="sticker-label">ugc.jpg</span></a>
+        <a class="sticker sticker--desk" href="gallery-film.html" style="--x:85%;--y:61%;--d:1.9s"><span class="sticker-img"><img src="assets/desktop icons/Frame 68.svg" alt=""></span><span class="sticker-label">35mm.jpg</span></a>
+        <a class="sticker sticker--desk" href="about.html" style="--x:14%;--y:45%;--d:2s"><span class="sticker-img"><img src="assets/desktop icons/Frame 70.svg" alt=""></span><span class="sticker-label">yoonji.jpg</span></a>
+        <a class="sticker sticker--desk" href="blog.html" style="--x:25%;--y:10%;--d:2.1s"><span class="sticker-img"><img src="assets/desktop icons/Frame 73.svg" alt=""></span><span class="sticker-label">blog.jpg</span></a>
+        <a class="sticker" href="#contact" style="--x:64%;--y:10%;--mx:78%;--my:34%;--d:2.2s"><span class="sticker-img"><img src="assets/desktop icons/Frame 75.svg" alt=""></span><span class="sticker-label">contact.jpg</span></a>
+      </div>
+    </header>
+
+    <div class="marquee marquee--tilt" aria-hidden="true">
+      <div class="marquee-track">
+        <span>builder</span><span>creator</span><span>entrepreneur</span><span>model</span><span>wanna do it all-er</span><span>just a small girl with big dreams</span>
+        <span>builder</span><span>creator</span><span>entrepreneur</span><span>model</span><span>wanna do it all-er</span><span>just a small girl with big dreams</span>
       </div>
     </div>
-  </div>
 
-  <!-- Music player (cassette triggers play/pause) -->
-  <div class="music-player-container music-player-container--minimal" id="music-player-container" aria-label="Background music player">
-    <audio id="bg-audio" preload="metadata">
-      <source src="assets/Kiss of Life.mp3" type="audio/mpeg">
-    </audio>
-    <div class="music-player-controls">
-      <button type="button" id="music-play-pause" class="btn-music" aria-label="Play background music">Play</button>
-      <label for="music-volume" class="visually-hidden">Volume</label>
-      <input type="range" id="music-volume" min="0" max="1" step="0.1" value="0.5" aria-label="Volume">
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="about-copy">
+        <span class="eyebrow reveal" style="--dot:var(--green)">01 — about</span>
+        <p class="reveal">hi, i'm yoonji! i'm a product manager based in new york city. i graduated from ucla and grew up in the east bay.</p>
+        <p class="reveal" style="--d:.08s">i'm passionate about entrepreneurship and expressing my identity through <em>building</em> — consumer apps, clothing brands, photography.</p>
+        <p class="reveal" style="--d:.16s">i'm known as the girl who's either fashionable or just a little weird, and always has a camera on deck to turn everyday life into art.</p>
+        <p class="reveal" style="--d:.24s">i want to <em>do it all.</em> this is the hub for it — welcome to my creative space.</p>
+        <a class="pill reveal" style="--d:.32s;--c:var(--green)" href="about.html">more about me <span class="arrow">→</span></a>
+      </div>
+      <div class="about-art">
+        <span class="scribble scribble--1" aria-hidden="true"><span class="reveal-line"><span>about</span></span></span>
+        <div class="strip reveal">
+          <span class="shot"><img src="images/web/Yoonji_001_0154-2_v1_Original.jpg" alt="Yoonji resting her chin on her hands" loading="lazy"></span>
+          <span class="shot"><img src="images/web/about-portrait.jpg" alt="Yoonji portrait in a light blue track jacket" loading="lazy"></span>
+          <span class="shot"><img src="images/web/eightcats_blackcat-36.jpg" alt="Yoonji sitting on a couch" loading="lazy"></span>
+          <span class="shot"><img src="images/web/IMG_5867.jpg" alt="Yoonji in a green jersey at night" loading="lazy"></span>
+        </div>
+        <span class="scribble scribble--2" aria-hidden="true"><span class="reveal-line" style="--d:.25s"><span>myself</span></span></span>
+      </div>
+    </section>
+
+    <!-- ============ WORK INDEX ============ -->
+    <section class="section" id="work">
+      <div class="index-head">
+        <h2 class="mega"><span class="reveal-line"><span>what i do</span></span></h2>
+        <p class="reveal">a little bit of everything. hover around — click into anything that looks fun.</p>
+      </div>
+      <ul class="index-list">
+        <li class="index-row reveal"><a href="resume.html" data-peek="images/web/about-portrait.jpg" style="--c:var(--pink)">
+          <span class="index-num">01</span><span class="index-title">product</span><span class="index-meta">apm @ mastercard. previously tinder, uber, poppin.</span><span class="index-arrow">→</span></a></li>
+        <li class="index-row reveal"><a href="builds.html" data-peek="images/web/4W2A2585.jpg" style="--c:var(--orange)">
+          <span class="index-num">02</span><span class="index-title">builds</span><span class="index-meta">ditch day apparel, vibe-coded apps &amp; side quests.</span><span class="index-arrow">→</span></a></li>
+        <li class="index-row reveal"><a href="gallery-modeling.html" data-peek="images/web/Yoonji_001_0265_v1a_Original.jpg" style="--c:var(--cyan)">
+          <span class="index-num">03</span><span class="index-title">modeling</span><span class="index-meta">comp card, editorials &amp; street.</span><span class="index-arrow">→</span></a></li>
+        <li class="index-row reveal"><a href="https://yoonjikimugc.my.canva.site/" target="_blank" rel="noopener noreferrer" data-peek="images/web/IMG_5862.jpg" style="--c:var(--lime)">
+          <span class="index-num">04</span><span class="index-title">ugc</span><span class="index-meta">brand content portfolio ↗</span><span class="index-arrow">→</span></a></li>
+        <li class="index-row reveal"><a href="gallery-film.html" data-peek="images/web/eightcats_blackcat-26.jpg" style="--c:var(--lilac)">
+          <span class="index-num">05</span><span class="index-title">35mm film</span><span class="index-meta">everyday life, made into art.</span><span class="index-arrow">→</span></a></li>
+        <li class="index-row reveal"><a href="blog.html" data-peek="images/web/4W2A2901.jpg" style="--c:var(--yellow)">
+          <span class="index-num">06</span><span class="index-title">blog</span><span class="index-meta">thoughts, notes &amp; diary entries.</span><span class="index-arrow">→</span></a></li>
+      </ul>
+    </section>
+
+    <div class="marquee marquee--rev" style="--bg:var(--lime)" aria-hidden="true">
+      <div class="marquee-track">
+        <span>mastercard</span><span>tinder</span><span>uber</span><span>ditch day apparel</span><span>poppin</span><span>product space</span><span>creative labs</span><span>ucla</span>
+        <span>mastercard</span><span>tinder</span><span>uber</span><span>ditch day apparel</span><span>poppin</span><span>product space</span><span>creative labs</span><span>ucla</span>
+      </div>
     </div>
-  </div>
 
-  <script src="js/navigation.js"></script>
-  <script src="js/music-player.js"></script>
-  <script src="js/drag-drop.js"></script>
-  <script src="js/cassette.js"></script>
-  <script src="js/contact-modal.js"></script>
-  <script src="js/main.js"></script>
+    <!-- ============ RESUME ============ -->
+    <section class="section" id="resume">
+      <div class="cv">
+        <div class="cv-photo reveal">
+          <span class="hand">currently ↓</span>
+          <span class="shot lift" style="--c:var(--orange)"><img src="images/web/4W2A2661.jpg" alt="Yoonji standing in a bodega aisle" loading="lazy"></span>
+          <img class="doodle-star" src="assets/Vector 40.svg" alt="">
+        </div>
+        <div>
+          <span class="eyebrow reveal" style="--dot:var(--orange)">02 — resume</span>
+          <div class="cv-group">
+            <h3><span class="reveal-line"><span>experience</span></span></h3>
+            <div class="cv-row reveal" style="--hl:var(--pink)"><span class="cv-co">mastercard</span><span class="cv-date">aug 2025 — now</span><span class="cv-role">associate product manager</span></div>
+            <div class="cv-row reveal" style="--hl:var(--orange)"><span class="cv-co">tinder</span><span class="cv-date">mar — jul 2025</span><span class="cv-role">product</span></div>
+            <div class="cv-row reveal" style="--hl:var(--cyan)"><span class="cv-co">uber</span><span class="cv-date">apr — jun 2025</span><span class="cv-role">lead product manager (contract)</span></div>
+            <div class="cv-row reveal" style="--hl:var(--lime)"><span class="cv-co">ditch day apparel</span><span class="cv-date">oct 2020 — apr 2024</span><span class="cv-role">founder, ceo</span></div>
+            <div class="cv-row reveal" style="--hl:var(--lilac)"><span class="cv-co">poppin (backed by pear vc)</span><span class="cv-date">feb 2022 — sep 2023</span><span class="cv-role">product marketing manager</span></div>
+          </div>
+          <div class="cv-group">
+            <h3><span class="reveal-line"><span>education</span></span></h3>
+            <div class="cv-row reveal" style="--hl:var(--yellow)"><span class="cv-co">ucla</span><span class="cv-date">2021 — 2025</span><span class="cv-role">b.s. cognitive science &amp; data science engineering, specialization in computer science</span></div>
+          </div>
+          <a class="pill reveal" style="--c:var(--orange)" href="resume.html">full resume <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section" id="gallery">
+      <div class="collage">
+        <div class="collage-title">
+          <h2 class="mega"><span class="reveal-line"><span>gallery</span></span></h2>
+          <div class="pills">
+            <a class="pill" style="--c:var(--cyan)" href="gallery-modeling.html">modeling <span class="arrow">→</span></a>
+            <a class="pill" style="--c:var(--pink)" href="gallery-film.html">film <span class="arrow">→</span></a>
+          </div>
+        </div>
+        <a class="shot lift reveal" href="gallery-modeling.html" data-speed=".4"><img src="images/web/4W2A2666.jpg" alt="Yoonji in a faux-fur coat in a bodega" loading="lazy"></a>
+        <a class="shot lift reveal" href="gallery-modeling.html" data-speed="-.3"><img src="images/web/Yoonji_001_0340_v1a_Original.jpg" alt="Legs crossed in black heels" loading="lazy"></a>
+        <a class="shot lift reveal" href="gallery-modeling.html" data-speed=".2"><img src="images/web/Yoonji_001_0265_v1a_Original.jpg" alt="Studio shot with blue glow" loading="lazy"></a>
+        <a class="shot lift reveal" href="gallery-modeling.html" data-speed="-.5"><img src="images/web/IMG_4475.jpg" alt="Night flash portrait in a fur hat" loading="lazy"></a>
+        <a class="shot lift reveal" href="gallery-modeling.html" data-speed=".5"><img src="images/web/IMG_5862.jpg" alt="Yoonji under a neon restaurant sign" loading="lazy"></a>
+        <a class="shot lift reveal" href="gallery-modeling.html" data-speed="-.2"><img src="images/web/Yoonji_001_0303_v1d_Original.jpg" alt="Lying on a studio floor" loading="lazy"></a>
+        <a class="shot lift reveal" href="gallery-modeling.html" data-speed=".3"><img src="images/web/eightcats_blackcat-26.jpg" alt="Lounging on a patterned couch" loading="lazy"></a>
+        <a class="shot lift reveal" href="gallery-modeling.html" data-speed="-.4"><img src="images/web/kim_yoonji21.jpg" alt="Full-length studio portrait" loading="lazy"></a>
+        <a class="shot lift reveal" href="gallery-modeling.html" data-speed=".25"><img src="images/web/4W2A2702.jpg" alt="Sitting on a checkered floor" loading="lazy"></a>
+        <a class="shot lift reveal" href="gallery-modeling.html" data-speed="-.35"><img src="images/web/IMG_1071.jpg" alt="Studio portrait in a black top" loading="lazy"></a>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <svg class="burst contact-burst spin" viewBox="0 0 200 200" aria-hidden="true"><polygon fill="currentColor" points="100.0,8.1 109.3,47.0 132.8,10.0 126.4,54.2 160.7,27.7 143.2,63.8 176.8,55.7 154.6,80.1 187.1,84.6 157.2,100.0 187.5,115.4 149.9,118.2 180.6,146.5 147.4,139.8 157.5,168.5 127.3,147.4 132.7,189.8 111.0,162.4 100.0,194.9 90.1,155.9 65.9,193.7 73.7,145.5 36.8,175.3 57.5,135.7 22.3,144.9 49.8,118.3 9.7,115.9 38.2,100.0 11.2,84.3 44.6,79.8 17.1,52.2 56.7,63.7 39.2,27.6 73.6,54.3 69.7,16.6 90.5,46.4"/></svg>
+      <div class="contact-inner">
+        <h2 class="reveal">Hello? Is this<br>thing on<span class="wobble">????</span></h2>
+        <p class="contact-sub reveal" style="--d:.1s">let's connect &lt;3</p>
+        <div class="contact-links">
+          <a class="pill reveal-pop" style="--d:.15s" href="mailto:kimyoonji2002@gmail.com">kimyoonji2002@gmail.com</a>
+          <a class="pill reveal-pop" style="--d:.22s" href="https://www.instagram.com/yoonjiikim/" target="_blank" rel="noopener noreferrer">ig @yoonjiikim</a>
+          <a class="pill reveal-pop" style="--d:.29s" href="https://www.tiktok.com/@yoonjamin" target="_blank" rel="noopener noreferrer">tiktok @yoonjamin</a>
+          <a class="pill reveal-pop" style="--d:.36s" href="https://www.linkedin.com/in/yoonjikim/" target="_blank" rel="noopener noreferrer">linkedin</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span data-year>2026</span> yoonji kim — made with &lt;3 in nyc</span>
+    <span class="footer-links"><a href="about.html">about</a><a href="resume.html">resume</a><a href="gallery.html">gallery</a><a href="builds.html">builds</a><a href="blog.html">blog</a><a href="#top">back to top ↑</a></span>
+  </footer>
+
+  <button class="tape" type="button" data-src="assets/Kiss of Life.mp3" aria-pressed="false" aria-label="Play or pause Kiss of Life by Sade">
+    <span class="tape-cass"><img src="assets/cassette.png" alt=""></span>
+    <span class="tape-label">kiss of life — sade<span class="tape-state">press play</span></span>
+    <span class="tape-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+  </button>
+
+  <div class="cursor-peek" aria-hidden="true"><img alt=""></div>
+
+  <script src="js/site.js"></script>
 </body>
 </html>
